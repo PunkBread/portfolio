@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benjamin Escamilla Rivas - Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+	<div id="language-switcher">
+		<span class="flag"><img id="uk-flag" src="assets/brit.png"></span>
+		<span class="flag" ><img id="es-flag" src="assets/sp.png"></span>
+	</div>	
+</head>
+<body>
+    <header id='enVer'>
+        <nav>
+            <div class="container">
+                <h1>Benjamin Escamilla Rivas</h1>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+	<header id='spVer'>
+        <nav>
+			<div class="container">
+                <h1>Benjamin Escamilla Rivas</h1>
+                <ul>
+                    <li><a href="#about">Sobre mi</a></li>
+                    <li><a href="#portfolio">Portafolio</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+	 <div>
+        <img src="floating-image.jpg" alt="Floating Image" id="floating-image">
+    </div>
+
+
+    <section id="about">
+        <div id='enVer' class="container">
+			<h2>About Me</h2>
+			<p>Hi, I'm Ben, a programmer with +4 years of experience in web development.Proficient in front-end technologies, skilled in back-end technologies and strong problem-solving mindset and a collaborative team player. Hold a degree in System Engineering. Passionate about staying up to date with the latest web development trends and technologies.</p>
+
+			<p>My expertise includes:</p>
+				<li>Front-end development using HTML, CSS, angular and JavaScript</li>
+				<li>Responsive and mobile-first web design</li>
+				<li>Building dynamic web applications with frameworks like React</li>
+				<li>Back-end development using Node.js, Java and php</li>
+				<li>Database management with SQL MySQL and Oracle databases</li>
+			<ul></ul>
+
+			<p>I believe in continuous learning, staying up-to-date with the latest industry trends, and collaborating with other developers to create innovative digital experiences.</p>
+
+			<p>I'm excited about the potential of the web and how it can bring ideas to life. Let's work together to turn your vision into a reality.</p>
+	
+        </div>
+		<div id='spVer' class="container">
+			<h2>Sobre Mí</h2>
+			<p>Hola, soy Ben, un programador con más de 4 años de experiencia en desarrollo web. Soy competente en tecnologías de front-end, habilidoso en tecnologías de back-end y tengo una mentalidad sólida para la resolución de problemas, además de ser un jugador colaborativo en equipo. Tengo un título en Ingeniería de Sistemas. Me apasiona mantenerme al día con las últimas tendencias y tecnologías de desarrollo web.</p>
+
+			<p>Mi experiencia incluye:</p>
+				<li>Desarrollo front-end con HTML, CSS, Angular y JavaScript</li>
+				<li>Diseño web responsive y orientado a dispositivos móviles</li>
+				<li>Creación de aplicaciones web dinámicas con frameworks como React</li>
+				<li>Desarrollo back-end con Node.js, Java y PHP</li>
+				<li>Administración de bases de datos con SQL, MySQL y bases de datos Oracle</li>
+
+			<p>Creo en el aprendizaje continuo, estar al día con las últimas tendencias de la industria y colaborar con otros desarrolladores para crear experiencias digitales innovadoras.</p>
+
+			<p>Me entusiasma el potencial de la web y cómo puede dar vida a ideas. Trabajemos juntos para convertir tu visión en realidad.</p>	
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+			<div class="carousel">
+        <div class="slide active">
+            <img src="assets/brit.png" alt="Slide 1">
+        </div>
+        <div class="slide">
+            <img src="assets/sp.png" alt="Slide 2">
+        </div>
+        <div class="slide">
+            <img src="slide3.jpg" alt="Slide 3">
+        </div>
+    </div>
+            <div class="project">
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>Description of Project 1.</p>
+            </div>
+            <div class="project">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Description of Project 2.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div  class="container">
+            <h2>Contact Me</h2>
+			<p>You can reach me at:</p>
+            <p>E-mail: benjaminescamillar@gmail.com</p>
+			<p>Phone: (+52) 55 6019 3688</p>
+			<p>Linkein: <a href="https://www.linkedin.com/in/benjamin-escamilla-rivas/">Benjamin Escamilla Rivas</a></p>
+        </div>
+		<div id='spVerC' class="container">
+            <h2>Contacto</h2>
+			<p>Puedes contactar conmigo en:</p>
+            <p>E-mail: benjaminescamillar@gmail.com</p>
+			<p>Teléfono: (+52) 55 6019 3688</p>
+			<p>Linkein: <a href="https://www.linkedin.com/in/benjamin-escamilla-rivas/">Benjamin Escamilla Rivas</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear">2021</span></p>
+        </div>	
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>

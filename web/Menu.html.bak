@@ -1,0 +1,380 @@
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Menú</title>
+		<link rel="stylesheet" type="text/css" href="shit.css" />
+		<script type="text/javascript" src='https://kit.fontawesome.com/a076d05399.js'></script>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/Chart.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/prestamoEquipo.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+		<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>  
+		<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+	</head>	
+	<body>	
+			<div class="text-right">
+			<legend class="p-3 mb-2 bg-primary text-white text-center">Menú.</legend>	
+			<div class="col-xs-2">			
+				<form align="left">
+					<div class="list-group">
+					  <button id="btnHome" type="button" class="list-group-item list-group-item-action active"><span class="glyphicon glyphicon-align-justify col-xs-12 text-center"></span></button>
+					  <button id="btnInventario" type="button" class="list-group-item list-group-item-action">Inventario <span class="glyphicon glyphicon-credit-card"></button>
+					  <button id="btnClases" type="button" class="list-group-item list-group-item-action">Clases <span class="glyphicon glyphicon-book"></span></button>
+					  <button id="btnPrestamo" type="button" class="list-group-item list-group-item-action">Prestamo <i class='fas fa-laptop'></i></button>
+					  <button id="btnUbicacion" type="button" class="list-group-item list-group-item-action">Ubicación <span class="glyphicon glyphicon-map-marker"></button>
+					</div>
+					<div id="lblLog" class="alert alert-info text-left" role="alert">
+						Este es un mensaje de información.
+					</div>
+					<button type='button' id="btnLogout" class="btn btn-primary">
+						<span class="glyphicon glyphicon-log-out float-left" aria-hidden="true"></span> Logout
+					</button>
+				</form>
+			</div>
+			<div class="container col-xs-8">
+				<div class="tab-content">
+					<div class="tab-pane active " id="home">
+						<img src="DGTIC.png" class="img-fluid" alt="Responsive image">
+					</div>
+					<div class="tab-pane " id="inventario">
+						<legend class="text-center">Inventario</legend>
+						<div class="text-right">							
+							<button  onclick = "reporteInventario()" id ="btnReporteInventario" type="button" class="btn btn-primary">Reporte</button>
+							<script>
+							
+								function reporteInventario(){
+									var printMe = document.getElementById('tabListadoInventario');
+									var wme = window.open("","","width:700,height:900");
+									wme.document.write(printMe.outerHTML);
+									wme.document.close();
+									wme.focus();
+									wme.print();
+									wme.close();
+								}
+							</script>
+						</div>
+						<form class="col-md-3">
+							<div class="form-group text-left">
+								<label for="txtObservaciones">Observaciones</label>
+								<input id="txtObservacionesInventario" type="text" class="form-control">
+							</div>
+							<div class="form-group	text-left">
+								<label for="txtTipoDeEquipo">Tipo de Equipo</label>
+								<select id="txtTipoDeEquipoInventario" class="form-control">
+									<option value=""></option>
+									<option value="Laptop">Laptop</option>
+									<option value="Monitor">Monitor</option>
+									<option value="CPU">CPU</option>
+									<option value="Pantalla todo en uno">Pantalla todo en uno</option>
+									<option value="Proyector">Proyector</option>
+									<option value="Televisión">Televisión</option>
+									<option value="Impresora">Impresora</option>
+								</select>
+							</div>
+							<div class="form-group	text-left">
+								<label for="txtMarca">Marca</label>
+								<select id="txtMarcaInventario" class="form-control">
+									<option value=""></option>
+									<option value="HP">HP</option>
+									<option value="Lenovo">Lenovo</option>
+									<option value="Dell">Dell</option>
+									<option value="Epson">Epson</option>
+									<option value="Samsung">Samsung</option>
+									<option value="Acer">Acer</option>
+									<option value="Active Cool">Active Cool</option>
+									<option value="Blue Code">Blue Code</option>
+									<option value="Zip Drive">Zip Drive</option>
+									<option value="Texa">Texa</option>
+								</select>
+							</div>
+							<div class="form-group text-left">
+								<label for="txtModelo">Modelo</label>
+								<select id="txtModeloInventario" class="form-control" disabled>
+									<option value=""></option>
+									<option value="S/M">S/M</option>
+									<option value="240 G3">240 G3</option>
+									<option value="Thinkpad Edge E440">Thinkpad Edge E440</option>
+									<option value="Latitude 3440">Latitude 3440</option>
+									<option value="Veriton L480G">Veriton L480G</option>
+									<option value="Optiplex 3020">Optiplex 3020</option>
+									<option value="Thinkcentre M79">Thinkcentre M79</option>
+									<option value="Acteck 500">Acteck 500</option>
+									<option value="Optiplex 740">Optiplex 740</option>
+									<option value="Helix Pro Gamming">Helix Pro Gamming</option>
+									<option value="Optiplex 990">Optiplex 990</option>
+									<option value="LaserJet Enterprise M605">LaserJet Enterprise M605</option>
+								</select>
+							</div>
+							<div class="form-group text-left">
+								<label for="txtEstatus">Estatus</label>
+								<select id="txtEstatusInventario" class="form-control">
+									<option value=""></option>
+									<option value="Disponible">Disponible</option>
+									<option value="No Disponible">No Disponible</option>
+								</select>
+							</div>
+							<div class="btn-group-vertical">
+								<button id="btnRegristrarInventario"type="button" class="btn btn-primary">Regristrar</button>
+								<button id="btnConsultarInventario" type="button" class="btn btn-primary">Consultar</button>
+							</div>
+							<div class="btn-group-vertical">
+								<button id="btnModificarInventario" type="button" class="btn btn-primary">Modificar</button>
+								<button id="btnBorrarInventario" type="button" class="btn btn-primary">Borrar</button>
+							</div>
+						</form>
+						<form class="col col-lg-2">
+							<table id ="tabListadoInventario" class="table">
+							  <thead class="thead-dark">
+								<tr>
+								  <th scope="col">Número de inventario</th>
+								  <th scope="col">Observaciones</th>
+								  <th scope="col">Tipo de Equipo</th>
+								  <th scope="col">Marca</th>
+								  <th scope="col">Modelo</th>
+								  <th scope="col">Estatus</th>
+								</tr>
+							  </thead>
+							  <tbody id="tbListadoInventario"></tbody>
+							</table>
+						</form>
+					</div>
+					<div class="tab-pane " id="clases">
+					<legend class="text-center">Clases</legend>
+					<div class="text-right">
+						<button id ="btnGraficaClases" type="button" class="btn btn-primary">Grafica</button>
+						<button onclick="reporteClase()" id ="btnReporteClases" type="button" class="btn btn-primary">Reporte</button>
+						<script>
+							function reporteClase(){
+								var printMe = document.getElementById('tbListadoClases');
+								var wme = window.open("","","width:700,height:900");
+								wme.document.write(printMe.outerHTML);
+								wme.document.close();
+								wme.focus();
+								wme.print();
+								wme.close();
+							}
+						</script>
+					</div>
+						<form class="col-md-3">
+							<div class="form-group text-left">
+								<label for="txtObservaciones">Fecha de Inicio</label>
+								<input id="txtFechaInicioClases" type="date" class="form-control">
+							</div>
+							<div class="form-group	text-left">
+								<label for="txtTipoDeEquipo">Fecha de Termino</label>
+								<input id="txtFechaTerminoClases" type="date" class="form-control">
+							</div>
+							<div class="form-group text-left">
+								<label for="txtModelo">Hora de Inicio</label>
+								<input id="txtHoraInicioClases"type="text" class="form-control" value="00:00">
+							</div>
+							<div class="form-group text-left">
+								<label for="txtEstatus">Hora de Termino</label>
+								<input id="txtHoraTerminoClases"type="text" class="form-control" value="00:00">
+							</div>
+							<div class="btn-group-vertical">
+								<button id="btnRegristrarClases"type="button" class="btn btn-primary">Regristrar</button>
+								<button id="btnConsultarClases" type="button" class="btn btn-primary">Consultar</button>
+							</div>
+							<div class="btn-group-vertical">
+								<button id="btnModificarClases" type="button" class="btn btn-primary">Modificar</button>
+								<button id="btnBorrarCLases" type="button" class="btn btn-primary">Borrar</button>
+							</div>
+						</form>
+						<form class="col col-lg-2">
+							<table class="table">
+							  <thead class="thead-dark">
+								<tr>
+								  <th scope="col">ID Clase</th>
+								  <th scope="col">Fecha Inicio</th>
+								  <th scope="col">Fecha Termino</th>
+								  <th scope="col">Hora Inicio</th>
+								  <th scope="col">Hora Termino</th>
+								</tr>
+							  </thead>
+							  <tbody id="tbListadoClases"></tbody>
+							</table>
+						</form>
+					</div>
+					<div class="tab-pane " id="prestamo">
+					<legend class="text-center">Prestamo</legend>
+					<div class="text-right">
+						<button id ="btnGraficaPrestamo" type="button" class="btn btn-primary">Grafica</button>
+						<button onclick = "reportePrestamo()"id ="btnReportePrestamo" type="button" class="btn btn-primary">Reporte</button>
+						<script>
+							function reportePrestamo(){
+								var printMe = document.getElementById('tbListadoPrestamo');
+								var wme = window.open("","","width:700,height:900");
+								wme.document.write(printMe.outerHTML);
+								wme.document.close();
+								wme.focus();
+								wme.print();
+								wme.close();
+							}
+						</script>
+					</div>
+						<form class="col-md-3">
+							<div class="form-group text-left">
+								<label for="txtObservaciones">Numero de Inventario</label>
+								<input id="txtNumeroInventarioPrestamo" type="text" class="form-control">
+							</div>
+							<div class="form-group	text-left">
+								<label for="txtTipoDeEquipo">Fecha de Inicio</label>
+								<input id="txtFechaInicioPrestamo" type="date" class="form-control">
+							</div>
+							<div class="form-group text-left">
+								<label for="txtModelo">Fecha de Termino</label>
+								<input id="txtFechaTerminoPrestamo" type="date" class="form-control">
+							</div>
+							<div class="form-group text-left">
+								<label for="txtEstatus">Ubicación</label>
+								<input id="txtUbicacionPrestamo" type="text" class="form-control">
+							</div>
+							<div class="btn-group-vertical">
+								<button id="btnRegristrarPrestamo"type="button" class="btn btn-primary">Regristrar</button>
+								<button id="btnConsultarPrestamo" type="button" class="btn btn-primary">Consultar</button>
+							</div>
+							<div class="btn-group-vertical">
+								<button id="btnModificarPrestamo" type="button" class="btn btn-primary">Modificar</button>
+								<button id="btnBorrarPrestamo" type="button" class="btn btn-primary">Borrar</button>
+							</div>
+						</form>
+						<form class="col col-lg-2">
+							<table class="table">
+							  <thead class="thead-dark">
+								<tr>
+								  <th scope="col">ID Prestamo</th>
+								  <th scope="col">Número de Inventario</th>
+								  <th scope="col">Fecha de Inicio</th>
+								  <th scope="col">Fecha de Termino</th>
+								  <th scope="col">Ubicación</th>
+								</tr>
+							  </thead>
+							  <tbody id="tbListadoPrestamo"></tbody>
+							</table>
+						</form>
+					</div>
+					<div class="tab-pane " id="ubicacion">
+					<legend class="text-center">Ubicación</legend>
+					<div class="text-right">
+						<button onclick ="reporteUbicacion()" id ="btnReporteUbicacion" type="button" class="btn btn-primary">Reporte</button>
+						<script>
+							function reporteUbicacion(){
+								var printMe = document.getElementById('tbListadoUbicacion');
+								var wme = window.open("","","width:700,height:900");
+								wme.document.write(printMe.outerHTML);
+								wme.document.close();
+								wme.focus();
+								wme.print();
+								wme.close();
+							}
+						</script>
+					</div>
+						<form class="col-md-3">
+							<div class="form-group text-left">
+								<label for="txtObservaciones">Sede</label>
+								<input id="txtSedeUbicacion" type="text" class="form-control">
+							</div>
+							<div class="form-group	text-left">
+								<label for="txtTipoDeEquipo">Dirección</label>
+								<input id="txtDireccionUbicacion" type="text" class="form-control">
+							</div>
+							<div class="btn-group-vertical">
+								<button id="btnRegristrarUbicacion"type="button" class="btn btn-primary">Regristrar</button>
+								<button id="btnConsultarUbicacion" type="button" class="btn btn-primary">Consultar</button>
+							</div>
+							<div class="btn-group-vertical">
+								<button id="btnModificarUbicacion" type="button" class="btn btn-primary">Modificar</button>
+								<button id="btnBorrarUbicacion" type="button" class="btn btn-primary">Borrar</button>
+							</div>
+						</form>
+						<form class="col col-lg-6">
+							<table class="table">
+							  <thead class="thead-dark">
+								<tr>
+								  <th scope="col">ID de Ubicación</th>
+								  <th scope="col">Sede</th>
+								  <th scope="col">Dirección</th>
+								</tr>
+							  </thead>
+							  <tbody id="tbListadoUbicacion" ></tbody>
+							</table>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div role="tabpanel" class="tab-pane">			
+		</div>
+	</body>
+	<canvas id="line-chart" width="8" height="4" style="visibility: hidden"></canvas>
+	<canvas id="doughnut-chart" width="8" height="4" style="visibility: hidden"></canvas>
+	
+<script>
+	new Chart(document.getElementById("line-chart"), {
+	  type: 'line',
+	  data: {
+		labels: [2016,2017,2018,2019,2020],
+		datasets: [{ 
+			data: [86,114,106,106,107,111,133,221,783,2478],
+			label: "DGTIC UNAM Polanco",
+			borderColor: "#3e95cd",
+			fill: false
+		  }, { 
+			data: [28,35,41,50,63,80,94,14,37,52],
+			label: "DGTIC UNAM CU",
+			borderColor: "#8e5ea2",
+			fill: false
+		  }, { 
+			data: [168,170,178,190,203,276,408,547,675,734],
+			label: "ISSTE - Dinamarca",
+			borderColor: "#3cba9f",
+			fill: false
+		  }, { 
+			data: [40,20,10,16,24,38,74,167,508,784],
+			label: "DGTIC UNAM Mascarones",
+			borderColor: "#e8c3b9",
+			fill: false
+		  }, { 
+			data: [6,3,2,2,7,26,82,172,312,433],
+			label: "DGTIC UNAM San Agustín",
+			borderColor: "#c45850",
+			fill: false
+		  }
+		]
+	  },
+	  options: {
+		title: {
+		  display: true,
+		  text: 'Grafico lineal '
+		}
+	  }
+	});
+</script>
+<script>
+	new Chart(document.getElementById("doughnut-chart"), {
+		type: 'doughnut',
+		data: {
+		  labels: ["DGTIC UNAM Polanco", "DGTIC UNAM CU", "ISSTE - Dinamarca", "DGTIC UNAM Mascarones", "DGTIC UNAM San Agustín"],
+		  datasets: [
+			{
+			  label: "Population (millions)",
+			  backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+			  data: [24,52,73,78,43]
+			}
+		  ]
+		},
+		options: {
+		  title: {
+			display: true,
+			text: 'Gráfico de Rosca'
+		  }
+		}
+	});
+</script>
+</html>

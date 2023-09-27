@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benjamin Escamilla Rivas - Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+	<div id="language-switcher">
+		<span class="flag"><img id="uk-flag" src="assets/brit.png"></span>
+		<span class="flag" ><img id="es-flag" src="assets/sp.png"></span>
+	</div>	
+</head>
+<body>
+    <header id = 'enVer'>
+        <nav>
+            <div class="container">
+                <h1>Benjamin Escamilla Rivas</h1>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+	<header id = 'spVer'>
+        <nav>
+			<div class="container" >
+                <h1>Benjamin Escamilla Rivas</h1>
+                <ul>
+                    <li><a href="#about">Sobre mi</a></li>
+                    <li><a href="#portfolio">Portafolio</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <section id="about">
+	 
+        <div id = 'enVerA' class="container">
+		<h2>About Me</h2>
+		<img class = "myFace" src="assets/38d973f2-835b-4d62-ab19-718b8999fbe8.jpg" alt="Ben's Profile">
+			<ol class="alternating-colors">
+			<strong>My expertise includes:</strong>
+			  <li>
+				<strong>Front-End Development</strong>
+				<p>HTML, CSS, JavaScript, Angular, AngularJS, Bootstap </p>
+			  </li>
+			  <li>
+				<strong>Back-End Development</strong>
+				<p>Java, React, PHP, Spring Boot, Node.JS</p>
+			  </li>
+			  <li>
+				<strong>Database</strong>
+				<p>Microsoft SQL, MySQL, Oracle</p>
+			  </li>
+			  <li>
+				<strong>Cloud</strong>
+				<p>Google Cloud, Docker, Azure</p>
+			  </li>
+			</ol>
+
+			<p>I believe in continuous learning, staying up-to-date with the latest industry trends, and collaborating with other developers to create innovative digital experiences.</p>
+
+			<p>I'm excited about the potential of the web and how it can bring ideas to life. Let's work together to turn your vision into a reality.</p>
+	
+        </div>
+		<div id = 'spVerA' class="container">
+			<h2>Sobre Mí</h2>
+			<img class = "myFace" src="assets/38d973f2-835b-4d62-ab19-718b8999fbe9.jpg" alt="Ben's Profile">
+			<ol class="alternating-colors">
+			<strong>Mi Experiencia Incluye:</strong>
+			  <li>
+				<strong>Front-End Development</strong>
+				<p>HTML, CSS, JavaScript, Angular, AngularJS, Bootstap </p>
+			  </li>
+			  <li>
+				<strong>Back-End Development</strong>
+				<p>Java, React, PHP, Spring Boot, Node.JS</p>
+			  </li>
+			  <li>
+				<strong>Database</strong>
+				<p>Microsoft SQL, MySQL, Oracle</p>
+			  </li>
+			  <li>
+				<strong>Cloud</strong>
+				<p>Google Cloud, Docker, Azure</p>
+			  </li>
+			</ol>
+			<p>Creo en el aprendizaje continuo, estar al día con las últimas tendencias de la industria y colaborar con otros desarrolladores para crear experiencias digitales innovadoras.</p>
+
+			<p>Me entusiasma el potencial de la web y cómo puede dar vida a ideas. Trabajemos juntos para convertir tu visión en realidad.</p>	
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+			
+            <div class="project">
+				<h3>Fontera</h3>
+				<img c="fontera" src="assets/1659377236492.jpg" alt="Image 1">
+				<p id = 'enVerPF' >Fontera is a specialized font management application developed by the Ford Fonts Team to enhance the way fonts are handled and used in Ford vehicles. Its primary purpose is to streamline font-related processes and ensure that the right fonts are selected and efficiently delivered to vehicle screens.</p>
+				<p id = 'spVerPF' >Fontera es una aplicación especializada de gestión de fuentes desarrollada por el Equipo de Fuentes de Ford para mejorar la forma en que se manejan y utilizan las fuentes en los vehículos de Ford. Su propósito principal es optimizar los procesos relacionados con las fuentes y asegurar que se seleccionen las fuentes adecuadas y se entreguen de manera eficiente a las pantallas de los vehículos.</p>
+            </div>
+            <div class="project">
+                <h3>Truiki.com</h3>
+				<div >
+					<div id="imageContainer" >
+						<img class="carImg" src="assets/status.png" alt="Image 1">
+					</div>
+				</div>
+                <p id = 'enVerPT'>Truiki.com is the fast, reliable, and secure e-commerce platform that enables the creation of online stores to facilitate the sale of products and/or services over the internet.</p>
+                <p id = 'spVerPT'>Truiki.com es la plataforma de comercio electrónico rápida, confiable y segura que permite la creación de tiendas en línea para facilitar la venta de productos y/o servicios por internet.</p>
+            </div>
+			<div class="project">
+                <h3>UNAM – DGTIC Mascarones</h3>
+				<div >
+					<div id="imageContainerTwo" >
+						<img class="carImg" src="assets/graficos.png" alt="Image 1">
+					</div>
+				</div>
+                <p id = 'enVerPM'>Description of Project 2.</p>
+                <p id = 'spVerPM'>Descripción</p>
+            </div>
+        </div>
+	
+    </section>
+
+    <section id="contact">
+        <div id = 'enVerC' class="container" style='background-color: #f2f2f2;'>
+            <h2>Contact Me</h2>
+			<p>You can reach me at:</p>
+            <p>E-mail: benjaminescamillar@gmail.com</p>
+			<p>Phone: (+52) 55 6019 3688</p>
+			<p>Linkein: <a href="https://www.linkedin.com/in/benjamin-escamilla-rivas/">Benjamin Escamilla Rivas</a></p>
+        </div>
+		<div id = 'spVerC' class="container" style='background-color: #f2f2f2;'>
+            <h2>Contacto</h2>
+			<p>Puedes contactar conmigo en:</p>
+            <p>E-mail: benjaminescamillar@gmail.com</p>
+			<p>Teléfono: (+52) 55 6019 3688</p>
+			<p>Linkein: <a href="https://www.linkedin.com/in/benjamin-escamilla-rivas/">Benjamin Escamilla Rivas</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear">2021</span></p>
+        </div>	
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
